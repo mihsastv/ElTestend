@@ -7,8 +7,8 @@ const calendarSchema = new Schema ({
         required: true,
     },
     avail: {
-        type: Boolean,
-        default: 'false'
+        type: Number,
+        default: '1'
     },
     room: {
         type: Number,

@@ -9,8 +9,12 @@ const morgan = require('morgan')
 const roomRoutes = require('./routes/room')
 const calenarRoutes = require('./routes/calendar')
 
-//'mongodb://localhost/EtTest'
-mongoose.connect('mongodb+srv://admin:1qaz1qaz@cluster0-wzuxj.mongodb.net/Eltest')
+
+//mongoose.connect('mongodb://localhost/EtTest',
+mongoose.connect('mongodb+srv://admin:1qaz1qaz@cluster0-wzuxj.mongodb.net/Eltest',
+    {useNewUrlParser: true,
+     useUnifiedTopology: true,
+     useCreateIndex: true})
   .then(()=>console.log('Mongo Connect'))
   .catch(error => console.log(error))
 

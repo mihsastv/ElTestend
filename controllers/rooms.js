@@ -57,7 +57,7 @@ module.exports.addRoom = async function (req, res) {
         function createContactsArray(len){
             for(var i = 1, arr = []; i <= len; i++) {
                 arr.push({'date': i,
-                          'avail': 'true',
+                          'avail': 1,
                           'room': req.body.room});
             }
             return arr;
